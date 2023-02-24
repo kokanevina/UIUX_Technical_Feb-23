@@ -53,7 +53,8 @@ let r3=addFun2(45,34);
 console.log("Addition is :"+r3);
 let r4=addFun2(67,89,90);
 console.log("Addition is :"+r4);
-addFun2(1,2,3,4,5);
+let r5=addFun2(1,2,3,4,5);
+console.log("Addition is :"+r5);
 addFun2(67,89,90,90);
 addFun2(5,4,5,4,5,6,3,2,1);
 
