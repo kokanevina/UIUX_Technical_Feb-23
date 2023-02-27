@@ -37,14 +37,23 @@ let arr3=arr2; // arr3 is just another reference to arr2
  console.log(arr3);  
  let arr5=[...arr1,...arr2];
  // display arr5
+
+//  var type variables declared anywhere inside function,  always have functional scope
+// let type variables delclared inside function, always have block scope where they are declared
+
+
 function addFun2(...ar){
 console.log(ar);
 let sum=0;
     for(let i=0;i<ar.length;i++){
         sum=sum+ar[i];
-    }
+    }// scope of i ended here
+   // console.log("i="+i); //Uncaught ReferenceError: i is not defined
+    // now replace let i with var i and see the difference
     return sum;
-}
+} // scope of sum ended here
+
+
 let r1=addFun2();
 console.log("Addition is :"+r1);
 let r2=addFun2(23);
@@ -58,6 +67,49 @@ console.log("Addition is :"+r5);
 addFun2(67,89,90,90);
 addFun2(5,4,5,4,5,6,3,2,1);
 
+// annonymous function
+let subFun = function(...ar){
+    let diff=ar[0];
+    for(let i=1;i<ar.length;i++){
+        diff=diff-ar[i];
+    }
+    return diff;
+}
 
+let resdif1=subFun(45,23);
+document.write(resdif1+"<br>");
+let resdif2=subFun(10,5,3,8,3);
+document.write(resdif2);
 
+let cubeFun=function(ele){
+     console.log("Element is :"+ele);
+     console.log("Cube is :"+(ele*ele*ele));
+}
+// no name, no functon keyword, fat arrow => between parenthesis and body
 
+let arrowFun1=(ele)=>{
+    console.log("Element is :"+ele);
+    console.log("Cube is :"+(ele*ele*ele));
+}
+
+// if arrow function accepts only one parameter then () are optional
+
+ arrowFun1=ele=>{
+    console.log("Element is :"+ele);
+    console.log("Cube is :"+(ele*ele*ele));
+}
+
+//if arrow function has single statement in body then {} are optional
+arrowFun1=ele=>console.log("Cube is :"+(ele*ele*ele));
+
+// if arrow function has single return statement in body then {} are optional and return keyword must not be used
+// body automatically returns the result
+
+arrowFun1=ele=>{
+   return (ele*ele*ele);
+}
+
+arrowFun1=ele=>ele*ele*ele;
+
+let cubeResult=arrowFun1(3);
+ console.log("Cube is:"+cubeResult);
