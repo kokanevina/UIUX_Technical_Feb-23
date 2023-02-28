@@ -57,3 +57,38 @@ salaryArray.forEach(    (sal,index)=>console.log(sal+"   "+index)     );
 
 console.log("forEach....");
 salaryArray.forEach(    (sal,index,ar)=>console.log(sal+"   "+index+"  "+ar)     );
+
+// find
+console.log("find.....");
+salaryArray=[19000,67000,34000,89000,56000,54000,23000];
+// find 1st salary which is greater than 50000
+let resultSal=salaryArray.find( sal=>sal>50000 );
+console.log(resultSal);
+
+let resultSalaries=salaryArray.filter( sal=>sal>50000 );
+console.log(resultSalaries);
+
+
+
+
+let largestSal=Math.max(67890,34222,45000,89000);
+console.log(largestSal);
+
+largestSal=Math.max(...salaryArray);
+console.log(largestSal);
+
+let smallestSal=Math.min(...salaryArray);
+console.log(smallestSal);
+
+
+
+console.log("reduce.....");
+let temp=salaryArray[0];
+let resultSal1=salaryArray.filter( 
+    sal=>{         
+        if(sal>temp)
+           temp=sal;
+           console.log(temp);
+           return temp;
+       } 
+    );

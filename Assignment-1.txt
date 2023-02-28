@@ -1,13 +1,14 @@
-Create a function which will accept salary array as input and finds gratest salary among all salaries and return that salary
+Create a function which will accept salary array as input and finds gratest salary among all salaries and return that salary  : Math.max
+// salary > value : find
 
 Create a function which will accept name array as input and finds all names which are starting with letter 'P'/'p' and returns 
-new array which contains result : all names
+new array which contains result : all names // filter
 
 Create a function which will accept name array as input and finds first name which are statring with letter 'P'/'p' and returns
-that result : only one  which found first
+that result : only one  which found first  // find
 
 Create a function which will accept age array as input. Each age from array should be doubled and saved in new array.
-Return new array as a result
+Return new array as a result // map
 
 
 
