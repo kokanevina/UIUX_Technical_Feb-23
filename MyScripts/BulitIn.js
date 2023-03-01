@@ -98,18 +98,17 @@ console.log("sum of array elements: reduce");
 let sumofages=ageArray.reduce(  (acc,age)=>acc+age );
 console.log(sumofages);
 
+
 // extra 10 should be added in sum of array elements
 // acc=10 (initital value)
-
 let initialValue=12;
-
 let sumofages1=ageArray.reduce(  (acc,age)=>acc+age, initialValue);
 console.log(sumofages1);
 
 console.log("reduce.....");
 salaryArray=[19000,67000,34000,89000,56000,54000,23000];
 let resultSal1=salaryArray.reduce( 
-    (acc,sal)=>{         
+    (acc,sal)=>{        
         if(sal>acc)
            acc=sal;
            return acc;
@@ -119,8 +118,6 @@ console.log(resultSal1);
 nameArray=['Hari','Pari','Pavan','pooja','kiran','Kumar','Sanavi','Pritam'];
 let contactValue=nameArray.reduce((acc,name)=>acc+name);
 console.log(contactValue);
-
-
 
 nameArray.push('Prabhu');
 console.log(nameArray);
