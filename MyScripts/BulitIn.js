@@ -116,12 +116,11 @@ let resultSal1=salaryArray.reduce(
        } 
     ); 
 console.log(resultSal1);
-
-
-
 nameArray=['Hari','Pari','Pavan','pooja','kiran','Kumar','Sanavi','Pritam'];
 let contactValue=nameArray.reduce((acc,name)=>acc+name);
 console.log(contactValue);
+
+
 
 nameArray.push('Prabhu');
 console.log(nameArray);
