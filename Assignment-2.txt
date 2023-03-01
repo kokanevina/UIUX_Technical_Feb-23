@@ -1,0 +1,10 @@
+1. consider age array [3,56,12,18,34,16,35,12,19,18]
+
+make sum of only those ages which are valid for voting (age >=18)
+
+
+2. Consider number array [2,3,5,2,3,6]
+
+make sum of square of above numbers
+
+Note : U have to use built in methods like map, reduce, find, filter for above questions
