@@ -1,14 +1,12 @@
 
 
 function greatestSal(ar){
-    let greater=ar[0];
-   
+    let temp=ar[0];  
     for(let ele of ar){
-        if(ele>greater)
-            greater=ele;
-    }
-   
-    return greater;
+        if(ele>temp)
+            temp=ele;
+    } 
+    return temp;
 }
 
 let salaryArray=[19000,67000,34000,89000,56000,54000,23000]; //6 7-1
@@ -62,14 +60,21 @@ salaryArray.forEach(    (sal,index,ar)=>console.log(sal+"   "+index+"  "+ar)    
 console.log("find.....");
 salaryArray=[19000,67000,34000,89000,56000,54000,23000];
 // find 1st salary which is greater than 50000
-let resultSal=salaryArray.find( sal=>sal>50000 );
+let resultSal=salaryArray.find( sal=>sal>50000 ); // returns single value as a result
 console.log(resultSal);
 
-let resultSalaries=salaryArray.filter( sal=>sal>50000 );
+let resultSalaries=salaryArray.filter( sal=>sal>50000 ); // array as a result
 console.log(resultSalaries);
 
 
+console.log("Name filter.....");
+let nameArray=['Hari','Pari','Pavan','pooja','kiran','Kumar','Sanavi','Pritam'];
 
+let nameswithP=nameArray.filter( name=> name.toLowerCase().startsWith('p'));
+console.log(nameswithP);
+
+let namewithP=nameArray.find( name=> name.toLowerCase().startsWith('p'));
+console.log(namewithP);
 
 let largestSal=Math.max(67890,34222,45000,89000);
 console.log(largestSal);
@@ -80,15 +85,52 @@ console.log(largestSal);
 let smallestSal=Math.min(...salaryArray);
 console.log(smallestSal);
 
+console.log("map...");
+let ageArray=[1,2,3,4,5,6];
 
+let mappedArray=ageArray.map(age=>age*2);
+
+console.log(ageArray);
+console.log(mappedArray);
+
+console.log("sum of array elements: reduce");
+
+let sumofages=ageArray.reduce(  (acc,age)=>acc+age );
+console.log(sumofages);
+
+// extra 10 should be added in sum of array elements
+// acc=10 (initital value)
+
+let initialValue=12;
+
+let sumofages1=ageArray.reduce(  (acc,age)=>acc+age, initialValue);
+console.log(sumofages1);
 
 console.log("reduce.....");
-let temp=salaryArray[0];
-let resultSal1=salaryArray.filter( 
-    sal=>{         
-        if(sal>temp)
-           temp=sal;
-           console.log(temp);
-           return temp;
+salaryArray=[19000,67000,34000,89000,56000,54000,23000];
+let resultSal1=salaryArray.reduce( 
+    (acc,sal)=>{         
+        if(sal>acc)
+           acc=sal;
+           return acc;
        } 
-    );
+    ); 
+console.log(resultSal1);
+
+
+
+nameArray=['Hari','Pari','Pavan','pooja','kiran','Kumar','Sanavi','Pritam'];
+let contactValue=nameArray.reduce((acc,name)=>acc+name);
+console.log(contactValue);
+
+nameArray.push('Prabhu');
+console.log(nameArray);
+let lastele=nameArray.pop(); //LIFO // delete last elements, we can not delete it with index
+console.log(lastele);
+console.log(nameArray);
+let sliceArray=nameArray.slice(0,4);
+console.log(sliceArray);
+let newArray=nameArray.splice(5,1); // delete the elements from particular index and returns deleted elements as new array
+//original array now will be changed
+console.log(newArray); // deleted elements
+console.log(nameArray); // changed array after deleting elements
