@@ -1,0 +1,1 @@
+Check other API functions of an String and implement those
