@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <div>
+        My Office Name is Neosoft. I am Developer here. I work in Web Department.
+        <a onmouseover="mouseEvent1()" onmouseout="mouseEvent2()" onmou href="#">More About Web Department</a>
+    </div>
+
+    <script>
+        function  mouseEvent1(){
+            console.log("User is hovering on anchor tag....");
+        }
+        function  mouseEvent2(){
+            console.log("User is coming out of anchor tag....");
+        }
+    </script>
+</body>
+</html>
