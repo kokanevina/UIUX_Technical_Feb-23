@@ -10,9 +10,10 @@
     <div>
         My Office Name is Neosoft. I am Developer here. I work in Web Department.
         <label>Enter ur Department name: </label>
-        <input type="text" id="dname" name="ddname"  onkeyup="keyEvent1()" onkeydown="keyEvent2()">
+        <input type="text" id="dname" name="ddname"  onkeyup="keyEvent1()" onkeydown="keyEvent2()" onfocus="focusEvent()" >
+        <button onclick="clickEvent()" ondblclick="dblClickEvent()">SEND</button>
     </div>
-
+    
     <script>
         function  keyEvent1(){
             console.log("key pressed up....");
@@ -20,6 +21,9 @@
         function  keyEvent2(){
             console.log("key pressed down....");
         }
+        let clickEvent=()=>console.log("Click Event handled...");
+        let dblClickEvent=()=>console.log("Double Click Event handled...");
+        let focusEvent=()=>console.log("Focus Event handled...");
     </script>
 </body>
 </html>
