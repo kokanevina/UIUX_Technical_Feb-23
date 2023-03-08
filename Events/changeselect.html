@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- tag, element-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <label>Are you married :</label>
+    <label id="labl">Are you married :</label>
     <input type="checkbox" id="answer" name="ans" onchange="stateChange()">
+    <textarea onselect="selectEvent()">
+        Neosoft Pvt Ltd, Dadar, Mumbai
+    </textarea>
+    <b>hi</b> <!-- b : tag, bold : element-->
     <script>
         let stateChange= function(){
             console.log("Checkbox state  changed");
+        }
+        function selectEvent(){
+            console.log("text selected");
         }
     </script>
 </body>
