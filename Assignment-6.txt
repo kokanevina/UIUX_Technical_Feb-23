@@ -1,0 +1,1 @@
+Implement Javascript logic to check which radio button is checked from gender radio button. Display value of checked radio button.

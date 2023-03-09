@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label>Choose Interested Courses to learn</label>
+        <div>
+          <label>JAVA:</label>  <input type="checkbox" id="java" name="course" value="Java" onchange="getValue()"><br>
+          <label>Web Basics:</label>  <input type="checkbox" id="web" name="course" value="Web Basics" onchange="getValue()"><br>
+          <label>Angular:</label>  <input type="checkbox" id="angular" name="course" value="Angular" onchange="getValue()"><br>
+          <label>React:</label>  <input type="checkbox" id="react" name="course" value="React" onchange="getValue()"><br>
+          <label>Python:</label>  <input type="checkbox" id="python" name="course" value="Python" onchange="getValue()"><br>
+        </div>
+    </form>
+    <script>
+        let nodeArray=document.getElementsByName('course');
+        function getValue(){
+            for(let node of nodeArray){
+            if(node.checked)
+                console.log(node.value); // later u can save these values in new array
+            } // ended
+            console.log("------");
+        }
+
+    </script>
+</body>
+</html>
