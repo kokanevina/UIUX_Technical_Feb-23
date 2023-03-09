@@ -1,1 +1,8 @@
 Implement blur event on any input field
+
+Create Image tag in html document. having source, height, width, and id
+Access that element usind DOM method getElementById
+Show following on console
+1. What is source of image
+2. What is current height
+3. What is current width

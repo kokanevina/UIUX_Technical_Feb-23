@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .namelabel{
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body >
     <form>
-        <label>First Name:</label>
-        <input type="text" id="fname" name="name" value="Ram">
-        <label>Last Name:</label>
-        <input type="text" id="lname" name="name">
+        <label class="namelabel">First Name:</label>
+        <input type="text" id="fname" name="myname" value="Ram" onblur="access()">
+        <label  class="namelabel">Last Name:</label>
+        <input type="text" id="lname" name="myname" value="Pujari">
+        <label>Enter age:</label>
+        <input type="number" id="age" name="myage" >
+        <h3 class="namelabel" id="heading">Enter company Name:</h3>
+        <input type="text" id="cname" name="cnamex">
     </form>
     <script>
         //R : search a node with id fname
-       let fnameNode= document.getElementById("fname");
+       let fnameNode= document.getElementById("fname"); // it returns single node
        console.log(fnameNode);
        console.log(typeof fnameNode); //HTMLElement
        // node.attribute
@@ -25,7 +35,36 @@
        let nodeValue=fnameNode.value;
        console.log(nodeValue);
        //fnameNode.value="Lakshman";
-     
+        let nodeArray=document.getElementsByName('myname');
+        console.log(nodeArray);
+        for(let node of nodeArray){
+            console.log(node.type);
+            console.log(node.value);
+        }
+        function access(){
+            console.log(fnameNode.value);
+        }
+
+        let nodeArray2=document.getElementsByClassName('namelabel');
+        console.log(nodeArray2);
+        // styling in javascript
+        for(let node of nodeArray2){
+            node.style.color='orange';  //color
+            node.style.fontSize="30px";     // font-size: 20px;
+            node.style.textDecoration="underline";
+        }
+
+        let colorArray=['yellow','pink','red','green','blue'];
+        let h3Node=document.getElementById('heading');
+        let i=0;
+        setInterval(()=>changeLabelColor(),3000);
+        
+       function changeLabelColor(){
+            h3Node.style.color=colorArray[i];
+            i++;
+            if(i==colorArray.length)
+             i=0;
+       }
     </script>
 </body>
 </html>
