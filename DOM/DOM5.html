@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            border: 10px double yellow;
+        }
+        .navStyle{
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let navNode=document.createElement('nav');
+        navNode.setAttribute('class','navbar');
+        navNode.setAttribute('id','nav');
+        let olNode=document.createElement('ol');
+        olNode.setAttribute('id','myNav');
+        navNode.append(olNode);
+        let atextArray=['HOME','LOgiN','ABout US','departments'];
+        let liNode;
+        for(let atext of atextArray){
+            liNode=document.createElement('li');
+            let aNode=document.createElement('a');
+            aNode.setAttribute('href','#');
+            aNode.textContent=atext;
+            liNode.append(aNode);
+            olNode.append(liNode);
+            liNode.style.margin="10px";
+            aNode.style.textDecoration="none";
+            aNode.style.textTransform="uppercase";
+        }
+        document.body.append(navNode);
+        navNode.style.backgroundColor="gray";
+        navNode.style.height="100px";
+        olNode.style.display="flex";
+        olNode.style.listStyleType="None";
+        navNode.classList.add('navStyle');
+      // navNode.setAttribute('class','navStyle');
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+1. Implement Image Slide show using setInterval and multiple Images. Use your own JS logic
+
+2. Implement Image Slide show using any inbuilt slide show js file. Refer Internet for this
