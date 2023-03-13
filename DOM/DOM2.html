@@ -7,7 +7,7 @@
     <title>DOM DEMO 2</title>
 </head>
 <body>
-    <form action="">
+    <form action="" id="courseInputForm">
         <label>Choose Interested Courses to learn</label>
         <div>
           <label>JAVA:</label>  <input type="checkbox" id="java" name="course" value="Java" onchange="getValue()"><br>
@@ -32,6 +32,7 @@
        // console.log(document.body);
         console.log(document.body.children);
         console.log(document.doctype);
+        console.log(document.getElementById('courseInputForm').children);
     </script>
 </body>
 </html>

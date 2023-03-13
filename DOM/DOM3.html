@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update DOM</title>
+</head>
+<body>
+    <h1 id="heading">Neosoft Technologies</h1>
+    <h2 id="heading2">Neosoft Technologies</h2>
+    <h3 id="heading3">Neosoft Technologies</h3>
+    <h4 id="heading4">Neosoft Technologies</h4>
+    <button onclick="updateDOM1()">Update Heading</button>
+    <ul id="drinkList">
+        <li>Tea</li>
+    </ul>
+    <button onclick="addItem()" id="addButton">ADD ITEM</button>
+
+    <script>
+        let h1Node=document.getElementById("heading");
+        let h2Node=document.getElementById("heading2");
+        let h3Node=document.getElementById("heading3");
+        let h4Node=document.getElementById("heading4");
+        let ulNode=document.getElementById('drinkList');
+        let addBtnNode=document.getElementById('addButton');
+        let paraNode=document.createElement("p");
+        paraNode.textContent="No more items to add";
+
+        function updateDOM1(){
+            // way-1
+            let textNode=document.createTextNode("NEOSOFT");
+            // textNode to be a child of h1Node
+            h1Node.replaceChildren(textNode);
+            // way-2
+            console.log(h2Node.innerText);
+            h2Node.innerText="<i>NEOSOFT</i>"; // it works with plain text
+            h2Node.innerHTML="<i>NEOSOFT</i>"; // it works with text and elements
+            //way-3
+            h3Node.textContent="NEOSOFT";
+
+            // actual way
+            let iNode=document.createElement('i');
+            iNode.textContent="NEOSOFT";
+            h4Node.replaceChildren(iNode);
+            }
+         let drinksArray=['Cofee','Green Tea','Lemon Tea','Cold Coffee'];   
+         let j=0;
+        function addItem(){
+            if(j<drinksArray.length){
+                let liNode=document.createElement('li');
+                liNode.textContent=drinksArray[j];
+                ulNode.append(liNode); // always adds new element at last after all childs
+                j++;
+            }
+            else{
+                document.body.insertBefore(paraNode,addBtnNode);
+            }
+        }
+      
+    </script>
+</body>
+</html>

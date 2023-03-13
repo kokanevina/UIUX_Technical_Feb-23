@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">
+        <b>Hello How r u</b> <i>Where you now days</i>
+    </p>
+    <button onclick="copypaste()">COPY PASTE</button>
+    <p id="para2">
+        
+    </p>
+    <p id="para3">
+
+    </p>
+    <script>
+        let copypaste=function(){
+          document.getElementById('para2').innerHTML=document.getElementById('para1').innerHTML;
+          document.getElementById('para3').innerText=document.getElementById('para1').innerText;
+        }
+    </script>
+</body>
+</html>
