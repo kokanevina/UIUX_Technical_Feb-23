@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM delete</title>
+</head>
+<body>
+    
+    <p id="para">
+        <b id="bold">India is my country</b>
+        <i id="italic">All indians are my brothers and sisters</i>
+    </p>
+    <button onclick="deleteDOM()">DELETE</button>
+    <script>
+        let deleteDOM =()=>{
+            let pNode=document.getElementById('para');
+            pNode.removeChild(document.getElementById('italic'));
+            document.getElementById('bold').remove();
+        }
+    </script>
+</body>
+</html>

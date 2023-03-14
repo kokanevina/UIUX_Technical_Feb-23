@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Register Form</title>
+    <style>
+        form span{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form novalidate>
+        <label>Enter your First Name:</label>
+        <input type="text" id="fname" pattern="[A-Za-z ]*" required onblur="validate1()"><br>
+        <span id="error1"></span><br><br>
+        <label>Enter your age:</label>
+        <input type="number" id="age" min="20" max="50" required onblur="validate2()"><br>
+        <span id="error2"></span><br><br>
+        <label>Enter email id:</label>
+        <input type="email" id="emailid"  required onblur="validate3()"><br>
+        <span id="error3"></span><br><br>
+        <label>Set Password:</label>
+        <input type="text" id="password" required onblur="validate4()"> <br>
+        <span id="error4"></span><br><br>
+        <label>Confirm Password:</label>
+        <input type="text" id="confirmpass" required onblur="validate5()"> <br>
+        <span id="error5"></span><br><br>
+        <input type="submit" value="REGISTER">
+    </form>
+    <script src="RegValidation.js"></script>
+</body>
+</html>
