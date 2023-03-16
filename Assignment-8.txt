@@ -1,0 +1,6 @@
+Add new text field for last name. and validate it same like first name
+
+Add new text field for mobile input. validate it
+1. mobile is required
+2. it should have length 10
+3. it should have only digits (pattern matching)

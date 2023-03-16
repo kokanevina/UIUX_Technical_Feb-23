@@ -24,12 +24,14 @@ function validate1(){
     let firstName=fnameNode.value;
     if(firstName==''){
         err1Node.innerHTML=emptyField;
+        return false;
     }
     else if(!namePattern.test(firstName)){
         err1Node.innerHTML="Name should have only characters";
+        return false;
     }
     else{
-
+        return true;
     }
 }
 
@@ -38,12 +40,14 @@ function validate2(){
     let age=ageNode.value;
     if(age==''){
         err2Node.innerHTML=emptyField;
+        return false;
     }
     else if(age<20 || age>50){
         err2Node.innerHTML="Age should be between 20 to 50";
+        return false;
     }
     else{
-
+        return true;
     }
 }
 
@@ -53,12 +57,14 @@ function validate3(){
     let emailId=mailNode.value;
     if(emailId==''){
         err3Node.innerHTML=emptyField;
+        return false;
     }
     else if(!emailId.includes('@') || emailId.endsWith('@')){
         err3Node.innerHTML="Please enter valid email id";
+        return false;
     }
     else{
-
+        return true;
     }
 }
 
@@ -69,15 +75,16 @@ function validate4(){
     //console.log(passwordPattern.test(pass));
     if(pass==''){
         err4Node.innerHTML=emptyField;
+        return false;
     }
     else if(!passwordPattern.test(pass)){
         err4Node.innerHTML="Password should have atleast one 1. small letter, 2. big letter, 3. digit, 4. symbol(). and it should be 6 to 12 chars long";
+        return false;
     }
     else{
-
+        return true;
     }
 }
-
 function validate5(){
     err5Node.innerHTML="";
     let confirmPass=cpassNode.value;
@@ -85,11 +92,35 @@ function validate5(){
     //console.log(passwordPattern.test(pass));
     if(confirmPass==''){
         err5Node.innerHTML=emptyField;
+        return false;
     }
     else if(confirmPass!=pass){
         err5Node.innerHTML="Password should match";
+        return false;
     }
     else{
+        return true;
+    }
+}
+function  validateAll(){
+    // if all fields are valid then function should return true
+    // else function should return false
+    let r1=validate1();  //T
+    let r2=validate2();   //T
+    let r3=validate3();  //T
+    let r4=validate4();  //T
+    let r5=validate5(); //T
+    return (r1 && r2 && r3 && r4 && r5) ; //T
+}
 
+let checkNode=document.getElementById('passshow');
+function showPassword(){
+    if(checkNode.checked){
+        passNode.type="text";
+        cpassNode.type="text";
+    }
+    else{
+        passNode.type="password";
+        cpassNode.type="password";
     }
 }

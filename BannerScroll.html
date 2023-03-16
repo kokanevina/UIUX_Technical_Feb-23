@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="banner">NEOSOFT</h2>
+    <script>
+        let h2Node=document.getElementById("banner");
+        let i=0;
+        let message=h2Node.innerText;
+        let colorArray=['red','green','blue','yellow','pink','orange','purple'];
+       
+        setInterval(() => bannerScroll(), 1000);
+        function bannerScroll(){
+            h2Node.style.color=colorArray[i];
+            message=message.slice(1)+message.charAt(0);
+            h2Node.innerText=message;
+            i++;
+            if(i==colorArray.length)
+                i=0;
+        }
+    </script>
+</body>
+</html>

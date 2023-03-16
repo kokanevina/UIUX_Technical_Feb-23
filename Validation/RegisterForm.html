@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <form novalidate>
+    <form action="Success.html" onsubmit="return validateAll()"    novalidate>
         <label>Enter your First Name:</label>
         <input type="text" id="fname" pattern="[A-Za-z ]*" required onblur="validate1()"><br>
         <span id="error1"></span><br><br>
@@ -24,11 +24,12 @@
         <input type="email" id="emailid"  required onblur="validate3()"><br>
         <span id="error3"></span><br><br>
         <label>Set Password:</label>
-        <input type="text" id="password" required onblur="validate4()"> <br>
+        <input type="password" id="password" required onblur="validate4()"> <br>
         <span id="error4"></span><br><br>
         <label>Confirm Password:</label>
-        <input type="text" id="confirmpass" required onblur="validate5()"> <br>
+        <input type="password" id="confirmpass" required onblur="validate5()"> <br>
         <span id="error5"></span><br><br>
+        <input type="checkbox" id="passshow" onchange="showPassword()"><label>:SHOW PASSWORD</label> <br> <br>
         <input type="submit" value="REGISTER">
     </form>
     <script src="RegValidation.js"></script>
